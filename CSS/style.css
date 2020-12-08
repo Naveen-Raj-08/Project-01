@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen");
-@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Julius Sans One");
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 @import url("https://fonts.googleapis.com/css?family=Josefin Sans");
@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 .wrapper {
-  background-color: rgb(223, 223, 223);
+  background-color: white;
 }
 .header {
   background-color: #303030;
@@ -44,17 +44,17 @@
   text-align: center;
 }
 .header > nav > ul > li > ul {
-  list-style: none;
-  position: absolute;
+  min-width: 100%;
+  background: #303030;
   display: none;
-  background-color: #303030;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  width: 200px;
+  position: absolute;
+  z-index: 999;
   left: 0;
+  font-family: Oxygen;
+  padding: 10px 10px;
 }
 .header > nav > ul > li > ul > li > a {
-  color: #f9f9f9;
+  color: #f1f1f1;
   letter-spacing: 1.5px;
   font-size: 12px;
   font-weight: 400;
@@ -131,4 +131,534 @@
   top: 30%;
   right: 300px;
   font-size: 25px;
+}
+
+#carousel {
+  margin: 50px 0px 100px 0px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 20px;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+.Heading {
+  text-align: center;
+  font-family: Julius Sans One;
+  margin: 50px 0;
+  position: relative;
+}
+.Heading > h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.Heading > h1 {
+  text-align: center;
+  height: 2px;
+  background-color: rgb(214, 42, 71);
+  width: 90px;
+  position: absolute;
+  left: 45%;
+}
+.block {
+  max-width: 100%;
+  width: 100%;
+  height: 400px;
+}
+.animatable {
+  visibility: hidden;
+  animation-play-state: paused;
+}
+.animated {
+  visibility: visible;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-play-state: running;
+}
+.animated.fadeInUp {
+  animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated.animationDelay {
+  animation-delay: 0.4s;
+}
+.animated.animationDelayMed {
+  animation-delay: 1.2s;
+}
+.animated.animationDelayLong {
+  animation-delay: 1.6s;
+}
+
+.product-content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.product-content .content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.product-content:hover .content-overlay {
+  opacity: 1;
+}
+
+.content-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out 0s;
+}
+.fadeIn-right {
+  left: 80%;
+}
+.product-content:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+.content-details > h1 {
+  background-color: rgb(214, 42, 71);
+  height: 2px;
+  width: 20%;
+  position: relative;
+  left: 40%;
+}
+
+.content-details p {
+  color: #fff;
+  font-size: medium;
+  font-family: Julius Sans One;
+}
+
+.content-details > button {
+  padding: 8px 13px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: whitesmoke;
+  letter-spacing: 1px;
+  transition: all 0.5s ease-in-out;
+}
+.content-details > button > i {
+  color: #303030;
+  font-size: small;
+  transition: all ease-in 0.5s;
+}
+
+.content-details > button:hover {
+  background-color: rgb(214, 42, 71);
+  color: white;
+}
+.content-details > button:hover > i {
+  color: white;
+}
+.Advertisement {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  background-color: #303030;
+  height: 150px;
+  color: white;
+  position: relative;
+}
+.Advertisement > h1 {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  font-family: Julius Sans One;
+  font-size: 30px;
+}
+.Advertisement > h5 {
+  position: absolute;
+  top: 60px;
+  left: 250px;
+  font-size: 40px;
+  font-family: Julius Sans One;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: rgb(214, 42, 71);
+}
+.Advertisement > p {
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  font-size: 14rem;
+  font-family: Josefin Sans;
+  font-weight: bolder;
+}
+.Advertisement > span {
+  position: absolute;
+  left: 64.7%;
+  top: 30px;
+  font-size: 3.6rem;
+}
+.Advertisement > button {
+  position: absolute;
+  top: 53px;
+  right: 100px;
+  padding: 10px 18px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.6s ease-in-out;
+}
+.Advertisement > button:hover {
+  background-color: rgb(214, 42, 71);
+  color: white;
+}
+.Selling-products {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-row-gap: 30px;
+  justify-self: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.Selling-products > .SP1 {
+  font-family: Poppins;
+}
+.Selling-products > .SP1 > .Image > img {
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+}
+.Selling-products > .SP1 > .Details {
+  padding: 5px 8px;
+  margin-top: 10px;
+}
+.Selling-products > .SP1 > .Details > h2 {
+  font-size: 25px;
+  color: #202020;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.Selling-products > .SP1 > .Details > span > i {
+  color: #707070;
+  font-size: small;
+}
+.Selling-products > .SP1 > .Details > p {
+  font-family: Julius Sans One;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+  color: #202020;
+}
+.Selling-products > .SP1 > .Details > button {
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 8px 12px;
+  transition: all 0.9s ease-in-out;
+}
+.Selling-products > .SP1 > .Details > button:hover {
+  box-shadow: inset 200px 0 0 0 rgb(214, 42, 71);
+  color: white;
+  border: 1px solid rgb(214, 42, 71);
+}
+
+/* 2nd Product */
+
+.Selling-products > .SP2 {
+  font-family: Poppins;
+}
+.Selling-products > .SP2 > .Image > img {
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+}
+.Selling-products > .SP2 > .Details {
+  padding: 5px 8px;
+  margin-top: 10px;
+}
+.Selling-products > .SP2 > .Details > h2 {
+  font-size: 25px;
+  color: #202020;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.Selling-products > .SP2 > .Details > span > i {
+  color: #707070;
+  font-size: small;
+}
+.Selling-products > .SP2 > .Details > p {
+  font-family: Julius Sans One;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+  color: #202020;
+}
+.Selling-products > .SP2 > .Details > button {
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 8px 12px;
+  transition: all 0.9s ease-in-out;
+}
+.Selling-products > .SP2 > .Details > button:hover {
+  box-shadow: inset 200px 0 0 0 rgb(214, 42, 71);
+  color: white;
+  border: 1px solid rgb(214, 42, 71);
+}
+
+/* 3rd Product */
+
+.Selling-products > .SP3 {
+  font-family: Poppins;
+}
+.Selling-products > .SP3 > .Image > img {
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+}
+.Selling-products > .SP3 > .Details {
+  padding: 5px 8px;
+  margin-top: 10px;
+}
+.Selling-products > .SP3 > .Details > h2 {
+  font-size: 25px;
+  color: #202020;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.Selling-products > .SP3 > .Details > span > i {
+  color: #707070;
+  font-size: small;
+}
+.Selling-products > .SP3 > .Details > p {
+  font-family: Julius Sans One;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+  color: #202020;
+}
+.Selling-products > .SP3 > .Details > button {
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 8px 12px;
+  transition: all 0.9s ease-in-out;
+}
+.Selling-products > .SP3 > .Details > button:hover {
+  box-shadow: inset 200px 0 0 0 rgb(214, 42, 71);
+  color: white;
+  border: 1px solid rgb(214, 42, 71);
+}
+/* 4th Product */
+.Selling-products > .SP4 {
+  font-family: Poppins;
+}
+.Selling-products > .SP4 > .Image > img {
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+}
+.Selling-products > .SP4 > .Details {
+  padding: 5px 8px;
+  margin-top: 10px;
+}
+.Selling-products > .SP4 > .Details > h2 {
+  font-size: 25px;
+  color: #202020;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.Selling-products > .SP4 > .Details > span > i {
+  color: #707070;
+  font-size: small;
+}
+.Selling-products > .SP4 > .Details > p {
+  font-family: Julius Sans One;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+  color: #202020;
+}
+.Selling-products > .SP4 > .Details > button {
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 8px 12px;
+  transition: all 0.9s ease-in-out;
+}
+.Selling-products > .SP4 > .Details > button:hover {
+  box-shadow: inset 200px 0 0 0 rgb(214, 42, 71);
+  color: white;
+  border: 1px solid rgb(214, 42, 71);
+}
+
+/* 5th Product */
+.Selling-products > .SP5 {
+  font-family: Poppins;
+}
+.Selling-products > .SP5 > .Image > img {
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+}
+.Selling-products > .SP5 > .Details {
+  padding: 5px 8px;
+  margin-top: 10px;
+}
+.Selling-products > .SP5 > .Details > h2 {
+  font-size: 25px;
+  color: #202020;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.Selling-products > .SP5 > .Details > span > i {
+  color: #707070;
+  font-size: small;
+}
+.Selling-products > .SP5 > .Details > p {
+  font-family: Julius Sans One;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+  color: #202020;
+}
+.Selling-products > .SP5 > .Details > button {
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 8px 12px;
+  transition: all 0.9s ease-in-out;
+}
+.Selling-products > .SP5 > .Details > button:hover {
+  box-shadow: inset 200px 0 0 0 rgb(214, 42, 71);
+  color: white;
+  border: 1px solid rgb(214, 42, 71);
+}
+/* 6th Product */
+
+.Selling-products > .SP6 {
+  font-family: Poppins;
+}
+.Selling-products > .SP6 > .Image > img {
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+}
+.Selling-products > .SP6 > .Details {
+  padding: 5px 8px;
+  margin-top: 10px;
+}
+.Selling-products > .SP6 > .Details > h2 {
+  font-size: 25px;
+  color: #202020;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.Selling-products > .SP6 > .Details > span > i {
+  color: #707070;
+  font-size: small;
+}
+.Selling-products > .SP6 > .Details > p {
+  font-family: Julius Sans One;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+  color: #202020;
+}
+.Selling-products > .SP6 > .Details > button {
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 8px 12px;
+  transition: all 0.9s ease-in-out;
+}
+.Selling-products > .SP6 > .Details > button:hover {
+  box-shadow: inset 200px 0 0 0 rgb(214, 42, 71);
+  color: white;
+  border: 1px solid rgb(214, 42, 71);
+}
+
+/* Footer */
+
+.footer {
+  background-color: #202020;
+  width: 100%;
+}
+.Footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px;
+  color: white;
+  font-family: Padauk;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+}
+.Footer > .contact {
+  margin: 0 40px;
+  margin-bottom: 50px;
+  justify-self: center;
+}
+.Footer > .contact > h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: whitesmoke;
+  letter-spacing: 1px;
+}
+.Footer > .contact > h4 {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: whitesmoke;
+  letter-spacing: 1px;
+}
+.Footer > .contact > h4 > span {
+  font-size: small;
 }
