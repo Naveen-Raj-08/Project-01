@@ -12,6 +12,36 @@
 .wrapper {
   background-color: white;
 }
+.wrapper > .title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Oxygen;
+  height: 50px;
+}
+.wrapper > .title > h4 {
+  font-size: small;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+.wrapper > .title > h4 > i {
+  font-size: 25px;
+  color: #303030;
+}
+.wrapper > .title > .Social > a {
+  padding: 8px 10px;
+  margin: 0 5px;
+  color: black;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+}
+.wrapper > .title > .Social > a:hover {
+  background-color: rgb(214, 42, 71);
+  border-radius: 50%;
+  color: white;
+}
 .header {
   background-color: #303030;
   display: grid;
@@ -145,7 +175,6 @@
 .block {
   max-width: 100%;
   width: 100%;
-  height: 400px;
 }
 .animatable {
   visibility: hidden;
@@ -225,8 +254,8 @@
   transform: translate(-50%, -50%);
   transition: all 0.5s ease-in-out 0s;
 }
-.fadeIn-right {
-  left: 80%;
+.fadeIn-bottom {
+  top: 80%;
 }
 .product-content:hover .content-details {
   top: 50%;
@@ -758,6 +787,7 @@
 }
 .Footer > .Location {
   margin-top: 20px;
+  overflow: hidden;
 }
 .Footer > .Location > h2 {
   font-family: Padauk;
@@ -792,8 +822,6 @@
 .subscribe > form > input {
   padding: 10px 15px;
   border: none;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
 }
 .subscribe > form > input:focus {
   border: none;
@@ -804,8 +832,6 @@
   border: none;
   color: white;
   background-color: rgb(214, 42, 71);
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 16px;
@@ -825,4 +851,112 @@
   max-width: 100%;
   width: 100%;
   height: auto;
+}
+
+/* Table Landscape view */
+@media screen and (max-width: 1199px) {
+  .content {
+    grid-gap: 5px;
+  }
+  .Advertisement {
+    margin-top: 5px;
+  }
+  .Advertisement > h5 {
+    left: 180px;
+  }
+  .Advertisement > span {
+    left: 67.5%;
+  }
+  .Advertisement > button {
+    right: 40px;
+  }
+  .Parallax > h5 {
+    left: 30%;
+  }
+  .Parallax > h3 {
+    left: 10%;
+  }
+  .Parallax > .overlay {
+    height: 525px;
+  }
+  .Footer {
+    grid-gap: 5px;
+  }
+}
+
+/* Tablet Portrait  view*/
+@media screen and (max-width: 999px) {
+  .header > nav > ul > li {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .header > nav > ul > li > a {
+    padding: 10px 10px;
+  }
+  .Advertisement {
+    height: 130px;
+    margin-top: 70px;
+  }
+  .Advertisement > h5 {
+    font-size: 23px;
+    left: 80px;
+    top: 55px;
+  }
+  .Advertisement > h1 {
+    font-size: 20px;
+    top: 30px;
+    left: 40px;
+  }
+  .Advertisement > p {
+    font-size: 12rem;
+    top: -63px;
+    left: 38%;
+  }
+  .Advertisement > span {
+    font-size: 2.5rem;
+    left: 59%;
+  }
+  .Parallax > h5 {
+    left: 32%;
+    font-size: 30px;
+  }
+  .Parallax > h3 {
+    left: 16%;
+    font-size: 50px;
+  }
+  .Parallax > .overlay {
+    height: 390px;
+  }
+  .Footer > .Contact > h2 {
+    font-size: 20px;
+  }
+  .Footer > .Contact > h3 {
+    font-size: 14px;
+  }
+  .Footer > .Contact > span {
+    font-size: 13px;
+  }
+  .Footer > .Service > h2 {
+    font-size: 20px;
+  }
+  .Footer > .Service > a {
+    font-size: 13px;
+  }
+  .Footer > .Location > h2 {
+    font-size: 20px;
+  }
+  .subscribe > .copyright > p {
+    font-size: 10px;
+  }
+  .subscribe > form {
+    padding: 0;
+    margin: 0;
+  }
+  .subscribe > form > input {
+    padding: 5px 8px;
+  }
+  .subscribe > form > button {
+    font-size: 10px;
+    padding: 8px 8px;
+  }
 }
