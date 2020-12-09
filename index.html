@@ -23,6 +23,15 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="container title">
+        <h4><i class="fas fa-phone-alt"></i> +190 839 9834</h4>
+        <h4>Free returns. Standard shipping order $99+</h4>
+        <div class="Social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
       <header class="sticky-top header">
         <div class="logo">
           <a href="#"><img src="./Media/Logo.png" alt="logo" /></a>
@@ -64,30 +73,41 @@
       </header>
       <main class="container">
         <section>
-          <div class="Parallax-banner">
-            <h4>Hello Welcome</h4>
+          <div id="banner" class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="./Media/Slide1.jpg" alt="Landing-Banner" />
+            </div>
+            <div class="item">
+              <img src="./Media/Slide2.jpg" alt="Landing-Banner" />
+            </div>
+            <div class="item">
+              <img src="./Media/Slide3.jpg" alt="Landing-Banner" />
+            </div>
+            <div class="item">
+              <img src="./Media/Slide4.jpg" alt="Landing-Banner" />
+            </div>
           </div>
           <div id="carousel" class="owl-carousel owl-theme">
             <div class="item">
-              <img src="./Media/Partner1.jpg" alt="Pratners" />
+              <img src="./Media/Partner1.jpg" alt="partners" />
             </div>
             <div class="item">
-              <img src="./Media/Partner2.jpg" alt="Pratners" />
+              <img src="./Media/Partner2.jpg" alt="partners" />
             </div>
             <div class="item">
-              <img src="./Media/Partner3.jpg" alt="Pratners" />
+              <img src="./Media/Partner3.jpg" alt="partners" />
             </div>
             <div class="item">
-              <img src="./Media/Partner4.jpg" alt="Pratners" />
+              <img src="./Media/Partner4.jpg" alt="partners" />
             </div>
             <div class="item">
-              <img src="./Media/Partner5.jpg" alt="Pratners" />
+              <img src="./Media/Partner5.jpg" alt="partners" />
             </div>
             <div class="item">
-              <img src="./Media/Partner6.jpg" alt="Pratners" />
+              <img src="./Media/Partner6.jpg" alt="partners" />
             </div>
             <div class="item">
-              <img src="./Media/Partner7.jpg" alt="Pratners" />
+              <img src="./Media/Partner7.jpg" alt="partners" />
             </div>
           </div>
         </section>
@@ -105,7 +125,7 @@
                   src="./Media/Diamond.jpg"
                   height="400px"
                 />
-                <div class="content-details fadeIn-right">
+                <div class="content-details fadeIn-bottom">
                   <h3>Diamond</h3>
                   <h1></h1>
                   <p>Starting from $60 to $10k</p>
@@ -123,7 +143,7 @@
                   src="./Media/Platinum.jpg"
                   height="400px"
                 />
-                <div class="content-details fadeIn-right">
+                <div class="content-details fadeIn-bottom">
                   <h3>Platinum</h3>
                   <h1></h1>
                   <p>Starting from $60 to $10k</p>
@@ -141,7 +161,7 @@
                   src="./Media/Gold.jpg"
                   height="400px"
                 />
-                <div class="content-details fadeIn-right">
+                <div class="content-details fadeIn-bottom">
                   <h3>Gold</h3>
                   <h1></h1>
                   <p>Starting from $60 to $10k</p>
@@ -270,9 +290,38 @@
             </div>
           </div>
         </section>
-        <section></section>
+        <section>
+          <div class="Parallax">
+            <video autoplay loop muted>
+              <source src="./Media/Parallax2.mp4" type="video/mp4" />
+            </video>
+            <div class="overlay">Hello Welcome</div>
+            <h5>Live the Moment</h5>
+            <h3>Classic Jewellery</h3>
+          </div>
+          <div class="Brands">
+            <div id="product-brands" class="owl-carousel owl-theme">
+              <div class="item">
+                <img src="./Media/Partner1.jpg" alt="Pratners" />
+              </div>
+              <div class="item">
+                <img src="./Media/Partner3.jpg" alt="Pratners" />
+              </div>
+              <div class="item">
+                <img src="./Media/Partner5.jpg" alt="Pratners" />
+              </div>
+              <div class="item">
+                <img src="./Media/Partner6.jpg" alt="Pratners" />
+              </div>
+              <div class="item">
+                <img src="./Media/Partner7.jpg" alt="Pratners" />
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer">
+        <div id="tsparticles"></div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -282,29 +331,67 @@
             ></path>
           </svg>
         </div>
-        <div class="container Footer">
-          <div class="mapouter">
-            <div class="gmap_canvas">
-              <iframe
-                id="gmap_canvas"
-                width="100%"
-                height="300"
-                src="https://maps.google.com/maps?q=Newyork&t=k&z=11&ie=UTF8&iwloc=&output=embed"
-                frameborder="0"
-                scrolling="no"
-                marginheight="0"
-                marginwidth="0"
-              >
-              </iframe>
-              <a href="https://embedgooglemap.net/mapv2/"></a>
+
+        <div class="container">
+          <div class="Footer">
+            <div class="Contact">
+              <h2>Contact Info</h2>
+              <h1></h1>
+              <h3>Phone:</h3>
+              <span>+190 839 9834</span>
+              <h3>Email:</h3>
+              <span><a href="mailto@exmaple.com">e-jewel@gmail.com</a></span>
+              <div class="Social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="Service">
+              <h2>Customer Service</h2>
+              <h1></h1>
+              <a href="#">About</a>
+              <a href="#">Order</a>
+              <a href="#">Favorites</a>
+              <a href="#">New Collections</a>
+            </div>
+            <div class="Location">
+              <h2>Location</h2>
+              <h1></h1>
+              <div class="mapouter">
+                <div class="gmap_canvas">
+                  <iframe
+                    id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=Newyork&t=k&z=11&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                  ></iframe>
+                  <a href="https://embedgooglemap.net/142/"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="subscribe">
+            <div class="copyright">
+              <p>&copy; Copyright 2020.All Rights Reserved</p>
+            </div>
+            <form>
+              <input type="email" placeholder="Your Email" />
+              <button>Subscribe <i class="fas fa-envelope"></i></button>
+            </form>
+            <div class="payment">
+              <img src="./Media/Payment.png" alt="payment" />
             </div>
           </div>
         </div>
       </footer>
     </div>
     <script src="./JavaScript/Jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
     <script src="./OwlCarousel/dist/owl.carousel.min.js"></script>
     <script src="./JavaScript/index.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
   </body>
 </html>
