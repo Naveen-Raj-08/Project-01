@@ -112,27 +112,6 @@
 }
 
 /* Main Content Styling */
-.Parallax-banner {
-  background: url("../Media/Slide2.jpg") no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #303030;
-  background-blend-mode: overlay;
-  max-width: 100%;
-  width: 100%;
-  height: 600px;
-  text-align: center;
-  position: relative;
-}
-.Parallax-banner > h4 {
-  color: white;
-  position: absolute;
-  top: 30%;
-  right: 300px;
-  font-size: 25px;
-}
-
 #carousel {
   margin: 50px 0px 100px 0px;
 }
@@ -621,44 +600,229 @@
   border: 1px solid rgb(214, 42, 71);
 }
 
+.Parallax {
+  position: relative;
+  z-index: 1;
+}
+.Parallax > video {
+  max-width: 100%;
+  width: 100%;
+}
+.Parallax > .overlay {
+  background: black;
+  width: 100%;
+  height: 625px;
+  position: absolute;
+  top: 0;
+  opacity: 0.6;
+  z-index: 999;
+}
+.Parallax > h5 {
+  position: absolute;
+  top: 37%;
+  left: 33%;
+  color: white;
+  z-index: 999;
+  font-family: Padauk;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.Parallax > h3 {
+  position: absolute;
+  top: 47%;
+  left: 17%;
+  color: rgb(214, 42, 71);
+  z-index: 999;
+  font-family: Padauk;
+  font-size: 5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.Brands {
+  margin: 100px 0;
+}
 /* Footer */
 
 .footer {
   background-color: #202020;
   width: 100%;
+  position: relative;
+  z-index: 999;
 }
+
 .Footer {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 33% 33% 33%;
+  justify-self: center;
   grid-gap: 20px;
   color: white;
+}
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+.Footer > .Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+.Footer > .Contact > h1 {
+  height: 1px;
+  width: 10%;
+  background: rgb(214, 42, 71);
+}
+.Footer > .Contact > h2 {
   font-family: Padauk;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #e6e6e6;
+  letter-spacing: 1px;
+}
+.Footer > .Contact > h3 {
+  font-family: Padauk;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #e6e6e6;
+  letter-spacing: 1px;
+}
+.Footer > .Contact > h4 {
+  font-family: Padauk;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #e6e6e6;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.Footer > .Contact > span {
+  font-family: Padauk;
+  font-size: 15px;
+  color: #a8a8a8;
+  letter-spacing: 1px;
+}
+.Footer > .Contact > span > a {
+  color: #a8a8a8;
+}
+.Footer > .Contact > .Social {
+  margin-top: 50px;
+}
+.Footer > .Contact > .Social > a {
+  border: 1px solid rgb(107, 107, 107);
+  padding: 6px 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.Footer > .Contact > .Social > a:hover {
+  background: rgb(214, 42, 71);
+  border: 1px solid rgb(214, 42, 71);
+}
+.Footer > .Contact > .Social > a > i {
+  color: whitesmoke;
+}
+.Footer > .Service {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.Footer > .Service > h1 {
+  height: 1px;
+  width: 10%;
+  background: rgb(214, 42, 71);
+}
+.Footer > .Service > h2 {
+  font-family: Padauk;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #e6e6e6;
+  letter-spacing: 1px;
+}
+.Footer > .Service > a {
+  padding: 5px 0px;
+  font-size: 15px;
+  color: #a8a8a8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.6s ease-in-out;
+}
+.Footer > .Service > a:hover {
+  text-decoration: none;
+  color: rgb(214, 42, 71);
+}
+.Footer > .Location {
+  margin-top: 20px;
+}
+.Footer > .Location > h2 {
+  font-family: Padauk;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #e6e6e6;
+  letter-spacing: 1px;
+}
+.Footer > .Location > h1 {
+  height: 1px;
+  width: 10%;
+  background: rgb(214, 42, 71);
 }
 .mapouter {
-  position: relative;
-  text-align: right;
+  margin-top: 20px 0;
+  max-width: 100%;
+  width: 100%;
 }
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
 }
-.Footer > .contact {
-  margin: 0 40px;
-  margin-bottom: 50px;
-  justify-self: center;
+.subscribe {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
 }
-.Footer > .contact > h2 {
-  font-size: 20px;
+.subscribe > form > input {
+  padding: 10px 15px;
+  border: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.subscribe > form > input:focus {
+  border: none;
+  outline: none;
+}
+.subscribe > form > button {
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  background-color: rgb(214, 42, 71);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   text-transform: uppercase;
-  color: whitesmoke;
   letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 600;
 }
-.Footer > .contact > h4 {
-  font-size: 15px;
-  text-transform: uppercase;
-  color: whitesmoke;
-  letter-spacing: 1px;
+.subscribe > form > button:focus {
+  outline: none;
+  border: none;
 }
-.Footer > .contact > h4 > span {
+.subscribe > .copyright > p {
+  color: #a8a8a8;
   font-size: small;
+  letter-spacing: 0.8px;
+  font-family: Quicksand;
+}
+.subscribe > .payment > img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
