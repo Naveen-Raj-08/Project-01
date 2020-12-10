@@ -15,7 +15,7 @@
 .wrapper > .title {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-family: Oxygen;
   height: 50px;
@@ -149,7 +149,7 @@
 .content {
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  grid-gap: 20px;
+  grid-gap: 10px;
   align-items: center;
   text-align: center;
   margin: 20px 0;
@@ -284,7 +284,7 @@
   font-family: Julius Sans One;
 }
 
-.content-details > button {
+.content-details > a {
   padding: 8px 13px;
   border: none;
   text-transform: uppercase;
@@ -293,18 +293,20 @@
   background-color: whitesmoke;
   letter-spacing: 1px;
   transition: all 0.5s ease-in-out;
+  color: #303030;
 }
-.content-details > button > i {
+.content-details > a > i {
   color: #303030;
   font-size: small;
   transition: all ease-in 0.5s;
 }
 
-.content-details > button:hover {
+.content-details > a:hover {
   background-color: rgb(214, 42, 71);
   color: white;
+  text-decoration: none;
 }
-.content-details > button:hover > i {
+.content-details > a:hover > i {
   color: white;
 }
 .Advertisement {
@@ -952,11 +954,179 @@
     padding: 0;
     margin: 0;
   }
-  .subscribe > form > input {
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 767px) {
+  .wrapper > .title > h4 {
+    font-size: 10px;
+    align-self: center;
+    margin-top: 10px;
+  }
+  .header > nav {
+    display: none;
+  }
+  .Heading > h1 {
+    left: 40%;
+  }
+  .Advertisement {
+    height: 100px;
+  }
+  .Advertisement > h1 {
+    top: 20px;
+    font-size: 15px;
+  }
+  .Advertisement > h5 {
+    font-size: 17px;
+    top: 35px;
+    left: 10%;
+  }
+  .Advertisement > p {
+    font-size: 9.5rem;
+    top: -50px;
+  }
+  .Advertisement > span {
+    top: 20px;
+    left: 59.7%;
+    font-size: 40px;
+  }
+  .Advertisement > button {
+    top: 35px;
+    right: 20px;
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+  .Selling-products {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .Parallax > h5 {
+    top: 25%;
+    left: 25%;
+  }
+  .Parallax > h3 {
+    font-size: 3rem;
+    top: 40%;
+    left: 5%;
+  }
+  .Parallax > .overlay {
+    height: 288px;
+    overflow: hidden;
+  }
+  .Brands {
+    margin: 50px 0;
+  }
+  .Footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .subscribe > form {
+    margin-bottom: 20px;
+  }
+  .content-details h3 {
+    font-size: 18px;
+  }
+  .content-details p {
+    font-size: 10px;
+  }
+  .content-details > button {
+    font-size: 10px;
     padding: 5px 8px;
   }
-  .subscribe > form > button {
+  .content-details > button > i {
     font-size: 10px;
-    padding: 8px 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper > .title {
+    display: none;
+  }
+  #carousel {
+    margin: 50px 0;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .Heading {
+    margin: 10px 0;
+  }
+  .Heading > h1 {
+    width: 40px;
+    left: 45%;
+  }
+  .Heading > h3 {
+    font-size: 20px;
+  }
+  .header {
+    padding: 0 18px;
+  }
+  .Advertisement {
+    height: 80px;
+  }
+  .Advertisement > h1 {
+    font-size: 10px;
+    left: 8px;
+  }
+  .Advertisement > h5 {
+    font-size: 13px;
+    top: 34%;
+    left: 20px;
+    padding: 5px 8px;
+  }
+  .Advertisement > p {
+    top: -40px;
+    left: 32%;
+    font-size: 7.5rem;
+  }
+  .Advertisement > span {
+    font-size: 2rem;
+    top: 16px;
+    left: 58%;
+  }
+  .Advertisement > button {
+    font-size: 8px;
+    padding: 5px 5px;
+    right: 10px;
+    top: 31px;
+  }
+  .Selling-products {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 50px;
+  }
+  .Parallax > .overlay {
+    height: 185px;
+  }
+  .Parallax > h5 {
+    font-size: 1.3rem;
+    left: 25%;
+    top: 32%;
+  }
+  .Parallax > h3 {
+    font-size: 1.5rem;
+    left: 12%;
+    top: 48%;
+  }
+  .Brands {
+    margin: 25px 0;
+  }
+  .subscribe > form > input {
+    font-size: 12px;
+  }
+  .subscribe > form > button {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+  .Footer {
+    display: grid;
+    grid-template-columns: 100%;
   }
 }
