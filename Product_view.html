@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product View</title>
+
+    <link
+      rel="stylesheet"
+      href="./OwlCarousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./OwlCarousel/dist/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+      integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g=="
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./CSS/Product_view.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container-fluid title">
+        <h4><i class="fas fa-phone-alt"></i> +190 839 9834</h4>
+        <h4>Free returns. Standard shipping order $99+</h4>
+        <div class="Social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <header class="sticky-top header">
+        <div class="logo">
+          <a href="index.html"><img src="./Media/Logo.png" alt="logo" /></a>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Favorites</a>
+              <ul>
+                <li>
+                  <a href="#">Menu</a>
+                </li>
+                <li>
+                  <a href="#">Menu</a>
+                </li>
+                <li>
+                  <a href="#">Menu</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cart">
+          <a href="#"
+            ><i class="fas fa-shopping-cart">
+              <span class="badge badge-danger">0</span></i
+            >
+          </a>
+        </div>
+      </header>
+      <main class="container">
+        <section class="product">
+          <div class="zoom" id="Product-zoom">
+            <img
+              src="./Media/SP3.jpg"
+              width="500"
+              id="Product"
+              alt="Product-image"
+            />
+          </div>
+          <div class="product-spec">
+            <h3>Platinum Earring</h3>
+            <span>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+              (<a href="#">6 Reviews</a>)
+            </span>
+            <h1></h1>
+            <h5>$69.00</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+              pariatur, tempore odio nulla debitis accusantium enim nesciunt
+              quod? Ratione, assumenda.
+            </p>
+            <div class="HR"></div>
+            <div class="Quantity">
+              <button onclick="Decrease()"><i class="fas fa-minus"></i></button>
+              <span id="result"></span>
+              <button onclick="Increase()"><i class="fas fa-plus"></i></button>
+              <a href="#" class="btn"
+                ><i class="fas fa-shopping-bag"></i> Add To Cart</a
+              >
+            </div>
+            <div class="HR"></div>
+            <div class="social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div id="tsparticles"></div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#fff"
+              fill-opacity="1"
+              d="M0,256L48,218.7C96,181,192,107,288,101.3C384,96,480,160,576,208C672,256,768,288,864,256C960,224,1056,128,1152,112C1248,96,1344,160,1392,192L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            ></path>
+          </svg>
+        </div>
+
+        <div class="container">
+          <div class="Footer">
+            <div class="Contact">
+              <h2>Contact Info</h2>
+              <h1></h1>
+              <h3>Phone:</h3>
+              <span>+190 839 9834</span>
+              <h3>Email:</h3>
+              <span><a href="mailto@exmaple.com">e-jewel@gmail.com</a></span>
+              <div class="Social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="Service">
+              <h2>Customer Service</h2>
+              <h1></h1>
+              <a href="#">About</a>
+              <a href="#">Order</a>
+              <a href="#">Favorites</a>
+              <a href="#">New Collections</a>
+            </div>
+            <div class="Location">
+              <h2>Location</h2>
+              <h1></h1>
+              <div class="mapouter">
+                <div class="gmap_canvas">
+                  <iframe
+                    id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=Newyork&t=k&z=11&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                  ></iframe>
+                  <a href="https://embedgooglemap.net/142/"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="subscribe">
+            <div class="copyright">
+              <p>&copy; Copyright 2020.All Rights Reserved</p>
+            </div>
+            <form>
+              <input type="email" placeholder="Your Email" />
+              <button>Subscribe <i class="fas fa-envelope"></i></button>
+            </form>
+            <div class="payment">
+              <img src="./Media/Payment.png" alt="payment" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./JavaScript/Jquery.min.js"></script>
+    <script src="./Jquery-zoom/jquery.zoom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
+    <script src="./JavaScript/Product_view.js"></script>
+  </body>
+</html>
