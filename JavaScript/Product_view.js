@@ -1,75 +1,3 @@
-$(document).ready(function () {
-  $("#carousel").owlCarousel({
-    loop: true,
-    margin: 10,
-    items: 5,
-    dots: false,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 3,
-      },
-      600: {
-        items: 3,
-      },
-      1000: {
-        items: 5,
-      },
-    },
-  });
-});
-
-$("#banner").owlCarousel({
-  items: 1,
-  loop: true,
-  dots: false,
-  autoplay: true,
-  autoplaySpeed: 1500,
-  autoplayTimeout: 7000,
-  slideTransition: "linear",
-});
-
-$("#product-brands").owlCarousel({
-  items: 5,
-  loop: false,
-  margin: 10,
-  dotsEach: false,
-  responsiveClass: true,
-  responsive: {
-    0: {
-      items: 2,
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 5,
-    },
-  },
-});
-
-// Scroll Animation
-
-jQuery(function ($) {
-  var doAnimations = function () {
-    var offset = $(window).scrollTop() + $(window).height(),
-      $animatables = $(".animatable");
-    if ($animatables.length == 0) {
-      $(window).off("scroll", doAnimations);
-    }
-
-    $animatables.each(function (i) {
-      var $animatable = $(this);
-      if ($animatable.offset().top + $animatable.height() - 20 < offset) {
-        $animatable.removeClass("animatable").addClass("animated");
-      }
-    });
-  };
-  $(window).on("scroll", doAnimations);
-  $(window).trigger("scroll");
-});
-
-//Background Particles
 $("#tsparticles")
   .particles()
   .init(
@@ -150,3 +78,23 @@ $("#tsparticles")
     },
     function (container) {}
   );
+
+$(document).ready(function () {
+  $("#Product-zoom").zoom();
+});
+
+var quantity = 1;
+document.getElementById("result").innerHTML = quantity;
+function Increase() {
+  if (quantity > 0 || quantity == 0) {
+    quantity++;
+  }
+  document.getElementById("result").innerHTML = quantity;
+}
+
+function Decrease() {
+  if (quantity > 0) {
+    quantity--;
+  }
+  document.getElementById("result").innerHTML = quantity;
+}
