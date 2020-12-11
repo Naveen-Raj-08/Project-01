@@ -951,6 +951,14 @@
   .subscribe > .copyright > p {
     font-size: 10px;
   }
+  .subscribe > form > input {
+    padding: 8px 8px;
+    font-size: 10px;
+  }
+  .subscribe > form > button {
+    padding: 8px 8px;
+    font-size: 10px;
+  }
   .subscribe > form {
     padding: 0;
     margin: 0;

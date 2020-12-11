@@ -558,6 +558,7 @@ ul.tabs li.active {
   font-size: small;
   letter-spacing: 0.8px;
   font-family: Quicksand;
+  margin-top: 18px;
 }
 .subscribe > .payment > img {
   max-width: 100%;
@@ -608,6 +609,14 @@ ul.tabs li.active {
   .subscribe > form {
     padding: 0;
     margin: 0;
+  }
+  .subscribe > form > input {
+    padding: 8px 8px;
+    font-size: 10px;
+  }
+  .subscribe > form > button {
+    padding: 8px 8px;
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 767px) {
