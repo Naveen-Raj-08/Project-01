@@ -86,7 +86,7 @@ $(document).ready(function () {
 var quantity = 1;
 document.getElementById("result").innerHTML = quantity;
 function Increase() {
-  if (quantity > 0 || quantity == 0) {
+  if (quantity >= 0) {
     quantity++;
   }
   document.getElementById("result").innerHTML = quantity;
@@ -98,3 +98,36 @@ function Decrease() {
   }
   document.getElementById("result").innerHTML = quantity;
 }
+
+$(document).ready(function () {
+  $("ul.tabs li").click(function () {
+    var tab_id = $(this).attr("data-tab");
+
+    $("ul.tabs li").removeClass("active");
+    $(".tab-content").removeClass("active");
+
+    $(this).addClass("active");
+    $("#" + tab_id).addClass("active");
+  });
+});
+
+$(document).ready(function () {
+  $("#related-items").owlCarousel({
+    items: 5,
+    loop: true,
+    autoplay: true,
+    margin: 10,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      },
+    },
+  });
+});
