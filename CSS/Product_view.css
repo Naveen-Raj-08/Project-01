@@ -52,6 +52,11 @@
 .header > .logo {
   grid-area: Logo;
 }
+.header > .logo > a > img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
 .header > nav {
   grid-area: Nav;
 }
