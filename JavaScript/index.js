@@ -150,3 +150,8 @@ $("#tsparticles")
     },
     function (container) {}
   );
+
+function nextPage() {
+  window.location.href = "../Product_list.html";
+  console.log("Successfully Redirected");
+}
