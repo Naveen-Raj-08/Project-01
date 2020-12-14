@@ -65,10 +65,10 @@
           </ul>
         </nav>
         <div class="cart">
-          <a href="#"
+          <a href="./Product_cart.html"
             ><i class="fas fa-shopping-cart">
-              <span class="badge badge-danger">20</span></i
-            >
+              <span id="cartCount" class="badge badge-danger"></span
+            ></i>
           </a>
           <div class="menu-container">
             <input type="checkbox" class="toggler" />
@@ -132,7 +132,7 @@
               <button onclick="Decrease()"><i class="fas fa-minus"></i></button>
               <span id="result"></span>
               <button onclick="Increase()"><i class="fas fa-plus"></i></button>
-              <a href="#" class="btn"
+              <a href="#" class="btn" onclick="AddCart()"
                 ><i class="fas fa-shopping-bag"></i> Add To Cart</a
               >
             </div>
