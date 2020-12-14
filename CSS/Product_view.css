@@ -16,9 +16,9 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   font-family: Oxygen;
-  height: 50px;
+  margin: 8px 0;
 }
 .wrapper > .title > h4 {
   font-size: small;
@@ -47,7 +47,7 @@
   display: grid;
   grid-template-columns: 20% 70% 10%;
   grid-template-areas: "Logo Nav Cart";
-  padding: 0px 30px;
+  padding: 0px 15px;
 }
 .header > .logo {
   grid-area: Logo;
@@ -127,6 +127,7 @@
 .header > .cart {
   grid-area: Cart;
   position: relative;
+  right: 25px;
 }
 .header > .cart > a {
   float: right;
@@ -747,8 +748,15 @@ ul.tabs li.active {
   }
 }
 @media screen and (max-width: 767px) {
-  .header > nav > ul > li {
+  .header {
+    display: grid;
+    grid-template-columns: 40% 50%;
+  }
+  .header > nav {
     display: none;
+  }
+  .Heading > h1 {
+    left: 40%;
   }
   .header > .cart > .menu-container {
     display: block;
@@ -784,8 +792,8 @@ ul.tabs li.active {
     display: none;
   }
   .header {
-    padding-left: 0;
-    padding-right: 20px;
+    display: grid;
+    grid-template-columns: 50% 40%;
   }
   .header > .cart {
     margin-right: 7px;
