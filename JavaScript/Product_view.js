@@ -131,3 +131,15 @@ $(document).ready(function () {
     },
   });
 });
+
+//Adding Items to cart
+var Count = 0;
+document.getElementById("cartCount").innerHTML = Count;
+
+function AddCart() {
+  if (Count >= 0) {
+    var Result = Count++;
+  }
+  var Total = Result + quantity;
+  document.getElementById("cartCount").innerHTML = Total;
+}

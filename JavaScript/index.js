@@ -152,6 +152,9 @@ $("#tsparticles")
   );
 
 function nextPage() {
-  window.location.href = "../Product_list.html";
-  console.log("Successfully Redirected");
+  window.location.replace("./Product_view.html");
+}
+
+function ProductPage() {
+  window.location.replace("./Product_list.html");
 }
