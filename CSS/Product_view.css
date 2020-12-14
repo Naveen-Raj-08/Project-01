@@ -783,8 +783,15 @@ ul.tabs li.active {
   .wrapper > .title {
     display: none;
   }
+  .header {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+  .header > .cart {
+    margin-right: 7px;
+  }
   .header > .cart > .menu-container {
-    right: 45px;
+    right: 50px;
   }
   .Footer {
     grid-template-columns: 100%;
