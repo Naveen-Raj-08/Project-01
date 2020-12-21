@@ -869,6 +869,9 @@ ul.tabs li.active {
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
+  .product-list > .product-items > .SP4 > .Details > button {
+    font-size: 10px;
+  }
   .Footer {
     display: grid;
     grid-template-columns: 50% 50%;
