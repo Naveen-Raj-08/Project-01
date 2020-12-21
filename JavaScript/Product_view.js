@@ -143,3 +143,16 @@ function AddCart() {
   var Total = Result + quantity;
   document.getElementById("cartCount").innerHTML = Total;
 }
+
+function Review() {
+  var CustomerFeedback = document.getElementById("CustomerFeedback");
+  var CustomerName = document.getElementById("customerName");
+  var CustomerEmail = document.getElementById("customerEmail");
+
+  var data = {
+    Name: CustomerName,
+    Email: CustomerEmail,
+    Feedback: CustomerFeedback,
+  };
+  console.log(data);
+}

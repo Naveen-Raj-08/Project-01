@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product View</title>
+    <title>JoJo Product View</title>
 
     <link
       rel="stylesheet"
@@ -159,7 +159,7 @@
               nisi ut aliquip ex ea commodo consequat.
             </div>
             <div id="tab-2" class="tab-content">
-              <form>
+              <form onsubmit="Review()">
                 <h5>Add a Review</h5>
                 <h6>your Rating</h6>
                 <span>
@@ -169,10 +169,17 @@
                   <i class="far fa-star"></i>
                   <i class="far fa-star"></i>
                 </span>
-                <textarea placeholder="your Review Please"></textarea>
-                <input type="text" placeholder="Your Name" />
-                <input type="email" placeholder="Your Email" />
-                <button>Submit</button>
+                <textarea
+                  placeholder="your Review Please"
+                  id="customerFeedback"
+                ></textarea>
+                <input type="text" id="customerName" placeholder="Your Name" />
+                <input
+                  type="email"
+                  id="customerEmail"
+                  placeholder="Your Email"
+                />
+                <button type="submit">Submit</button>
               </form>
             </div>
           </div>
