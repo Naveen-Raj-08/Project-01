@@ -117,25 +117,28 @@
                   <i class="fas fa-plus"></i>
                 </button>
               </div>
-              <p class="price">$100.00</p>
+              <p class="price">$<span id="price"></span></p>
             </div>
           </div>
-          <div class="payment">
+          <div class="Payment-option">
             <h2>The total amount of product</h2>
             <table>
               <tr>
                 <td>Temporary amount</td>
-                <td>$69</td>
+                <td>
+                  $<span id="productPrice"></span> x
+                  <span id="quantity"></span>
+                </td>
               </tr>
               <tr class="data">
                 <td>Shipping</td>
-                <td>$3</td>
+                <td>$<span id="shipping"></span></td>
               </tr>
             </table>
             <table>
               <tr>
                 <td class="total">The total amount of<br />(including GST)</td>
-                <td class="total">$75</td>
+                <td class="total">$<span id="totalPrice"></span></td>
               </tr>
             </table>
             <button class="button">Go to Checkout</button>
