@@ -268,6 +268,109 @@
   color: rgb(214, 42, 71);
   text-decoration: none;
 }
+section {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 10px;
+  padding: 10px 10px;
+  margin-top: 50px;
+}
+.cart-content > .cart {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 5px;
+  align-items: center;
+}
+.cart-content > .cart > .Image > img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.cart-content > .cart > h2 {
+  font-size: 20px;
+}
+.cart-content > .cart > .Quantity > button {
+  padding: 8px 10px;
+  background: transparent;
+  /* border: 1px solid #757575; */
+  border-radius: 50%;
+  border: none;
+}
+.cart-content > .cart > .Quantity > button:hover > i {
+  color: #202020;
+}
+.cart-content > .cart > .Quantity > button:focus {
+  outline: none;
+}
+.cart-content > .cart > .Quantity > button > i {
+  font-size: 16px;
+  color: rgb(156, 156, 156);
+}
+.cart-content > .cart > .Quantity > span {
+  padding: 10px 12px;
+  /* border: 1px solid #757575; */
+  border-radius: 50%;
+}
+.cart-content > .cart > p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.payment > h2 {
+  font-size: 23px;
+  font-weight: 600;
+}
+table {
+  margin: 30px 0px 0px 0px;
+  border-collapse: collapse;
+  width: 100%;
+}
+.data {
+  border-bottom: 1px solid #d1d1d1;
+}
+.total {
+  font-weight: 600;
+}
+.button {
+  padding: 5px 10px;
+  margin-top: 20px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid black;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  transition: all 0.5s ease-in-out;
+}
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  color: white;
+  background-color: rgb(214, 42, 71);
+  border: 1px solid rgb(214, 42, 71);
+}
+td {
+  padding: 10px;
+  font-size: 18px;
+}
+.coupon {
+  margin-top: 50px;
+  width: 100%;
+  text-align: left;
+}
+.coupon > input {
+  padding: 8px 13px;
+  letter-spacing: 0.5px;
+}
+.coupon > input:focus {
+  outline-color: rgb(214, 42, 71);
+}
 
 .footer {
   background-color: #202020;
@@ -275,7 +378,6 @@
   position: relative;
   z-index: 999;
 }
-
 .Footer {
   display: grid;
   grid-template-columns: 33% 33% 33%;
