@@ -322,7 +322,7 @@ section {
   align-items: flex-start;
   width: 100%;
 }
-.payment > h2 {
+.Payment-option > h2 {
   font-size: 23px;
   font-weight: 600;
 }
