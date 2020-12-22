@@ -325,7 +325,7 @@
 .product > .product-spec > .Quantity > button {
   background-color: transparent;
   border: 1px solid black;
-  padding: 10px 10px;
+  padding: 10px 15px;
 }
 .product > .product-spec > .Quantity > button > i {
   color: #909090;
@@ -333,7 +333,7 @@
 }
 .product > .product-spec > .Quantity > span {
   border: 1px solid black;
-  padding: 10px 10px;
+  padding: 10px 15px;
   font-weight: 600;
   color: #303030;
 }
@@ -491,6 +491,8 @@ ul.tabs li.active {
   color: #202020;
   font-weight: 400;
   text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .item > .Details > span > i {
   color: #707070;
@@ -531,6 +533,9 @@ ul.tabs li.active {
   border-radius: 0;
   font-family: Josefin Sans;
   z-index: 999;
+  min-height: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .product-list > .product-items::before {
   content: "";
@@ -546,6 +551,10 @@ ul.tabs li.active {
 .product-list > .product-items > .SP4 > .Image > img {
   max-width: 100%;
   width: 100%;
+}
+.product-list > .product-items > .SP4 > .Details {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .product-list > .product-items > .SP4 > .Details > a {
   color: #606060;
@@ -869,6 +878,9 @@ ul.tabs li.active {
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
+  .product-list > .product-items > .SP4 > .Details > a {
+    font-size: 15px;
+  }
   .product-list > .product-items > .SP4 > .Details > button {
     font-size: 10px;
   }
@@ -904,6 +916,9 @@ ul.tabs li.active {
   }
   .header > .cart > .menu-container > .toggler {
     right: 0px;
+  }
+  .product-list > .product-items {
+    min-height: 300px;
   }
   .Footer {
     grid-template-columns: 100%;
