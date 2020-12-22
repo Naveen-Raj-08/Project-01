@@ -1,12 +1,13 @@
 var quantity = 1;
 var price = 69;
-var totalPrice = "";
+var totalPrice = 0;
 var ShippingCost = 3;
 
 //Dom first Rendering
 document.getElementById("result").innerHTML = quantity;
 document.getElementById("price").innerHTML = price;
-document.getElementById("totalPrice").innerHTML = price + ShippingCost;
+document.getElementById("totalPrice").innerHTML =
+  price * quantity + ShippingCost;
 document.getElementById("productPrice").innerHTML = price;
 document.getElementById("shipping").innerHTML = ShippingCost;
 document.getElementById("quantity").innerHTML = quantity;
@@ -15,15 +16,14 @@ document.getElementById("quantity").innerHTML = quantity;
 function Increase() {
   if (quantity >= 0) {
     quantity++;
-    totalPrice = price * quantity + ShippingCost;
-    if (price > 99) {
-      ShippingCost = 0;
-    }
+    totalPrice = price * quantity;
   }
-  document.getElementById("result").innerHTML = quantity;
-  document.getElementById("price").innerHTML = totalPrice;
-  document.getElementById("totalPrice").innerHTML = totalPrice;
+  totalPrice < 99
+    ? (document.getElementById("totalPrice").innerHTML =
+        totalPrice + ShippingCost)
+    : (document.getElementById("totalPrice").innerHTML = totalPrice);
 
+  document.getElementById("result").innerHTML = quantity;
   document.getElementById("quantity").innerHTML = quantity;
 }
 
@@ -36,8 +36,10 @@ function Decrease() {
     }
     totalPrice = price * quantity;
   }
+  totalPrice < 99
+    ? (document.getElementById("totalPrice").innerHTML =
+        totalPrice + ShippingCost)
+    : (document.getElementById("totalPrice").innerHTML = totalPrice);
   document.getElementById("result").innerHTML = quantity;
-  document.getElementById("price").innerHTML = totalPrice;
-  document.getElementById("totalPrice").innerHTML = totalPrice;
   document.getElementById("quantity").innerHTML = quantity;
 }
