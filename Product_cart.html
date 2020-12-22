@@ -99,6 +99,52 @@
           </div>
         </div>
       </header>
+      <main>
+        <div class="heading"></div>
+        <section class="container">
+          <div class="cart-content">
+            <div class="cart">
+              <div class="Image">
+                <img src="./Media/SP3.jpg" alt="selling product" />
+              </div>
+              <h2>Platinum Earring</h2>
+              <div class="Quantity">
+                <button id="leftbtn" onclick="Decrease()">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <span id="result"></span>
+                <button id="rightbtn" onclick="Increase()">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+              <p class="price">$100.00</p>
+            </div>
+          </div>
+          <div class="payment">
+            <h2>The total amount of product</h2>
+            <table>
+              <tr>
+                <td>Temporary amount</td>
+                <td>$69</td>
+              </tr>
+              <tr class="data">
+                <td>Shipping</td>
+                <td>$3</td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td class="total">The total amount of<br />(including GST)</td>
+                <td class="total">$75</td>
+              </tr>
+            </table>
+            <button class="button">Go to Checkout</button>
+            <div class="coupon">
+              <input type="text" placeholder="Apply coupons" />
+            </div>
+          </div>
+        </section>
+      </main>
       <footer class="footer">
         <div id="tsparticles"></div>
         <div>
@@ -167,5 +213,6 @@
         </div>
       </footer>
     </div>
+    <script src="./JavaScript/Product_cart.js"></script>
   </body>
 </html>
