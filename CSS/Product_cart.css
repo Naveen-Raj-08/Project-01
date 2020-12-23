@@ -399,7 +399,7 @@ td {
   align-items: flex-start;
   margin: 20px 0;
 }
-.Footer > .Contact > h1 {
+.Footer > .Contact > h5 {
   height: 1px;
   width: 10%;
   background: rgb(214, 42, 71);
@@ -458,7 +458,7 @@ td {
   flex-direction: column;
   margin: 20px 0;
 }
-.Footer > .Service > h1 {
+.Footer > .Service > h5 {
   height: 1px;
   width: 10%;
   background: rgb(214, 42, 71);
@@ -493,7 +493,7 @@ td {
   color: #e6e6e6;
   letter-spacing: 1px;
 }
-.Footer > .Location > h1 {
+.Footer > .Location > h5 {
   height: 1px;
   width: 10%;
   background: rgb(214, 42, 71);

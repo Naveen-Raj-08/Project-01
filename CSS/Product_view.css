@@ -288,7 +288,7 @@
   color: #353535;
   font-weight: 600;
 }
-.product > .product-spec > h1 {
+.product > .product-spec > h4 {
   height: 3px;
   background-color: rgb(214, 42, 71);
   opacity: 0.3;
@@ -466,7 +466,7 @@ ul.tabs li.active {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.Heading > h1 {
+.Heading > h5 {
   text-align: center;
   height: 2px;
   background-color: rgb(214, 42, 71);
@@ -627,7 +627,7 @@ ul.tabs li.active {
   align-items: flex-start;
   margin: 20px 0;
 }
-.Footer > .Contact > h1 {
+.Footer > .Contact > h5 {
   height: 1px;
   width: 10%;
   background: rgb(214, 42, 71);
@@ -686,7 +686,7 @@ ul.tabs li.active {
   flex-direction: column;
   margin: 20px 0;
 }
-.Footer > .Service > h1 {
+.Footer > .Service > h5 {
   height: 1px;
   width: 10%;
   background: rgb(214, 42, 71);
@@ -721,7 +721,7 @@ ul.tabs li.active {
   color: #e6e6e6;
   letter-spacing: 1px;
 }
-.Footer > .Location > h1 {
+.Footer > .Location > h5 {
   height: 1px;
   width: 10%;
   background: rgb(214, 42, 71);
@@ -855,7 +855,7 @@ iframe {
   .header > nav {
     display: none;
   }
-  .Heading > h1 {
+  .Heading > h5 {
     left: 0;
   }
   .header > .cart {
