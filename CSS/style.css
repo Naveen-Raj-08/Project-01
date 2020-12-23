@@ -445,7 +445,7 @@
   color: white;
   position: relative;
 }
-.Advertisement > h1 {
+.Advertisement > h3 {
   position: absolute;
   top: 30px;
   left: 100px;
@@ -1042,7 +1042,7 @@ iframe {
     left: 80px;
     top: 55px;
   }
-  .Advertisement > h1 {
+  .Advertisement > h3 {
     font-size: 20px;
     top: 30px;
     left: 40px;
@@ -1124,7 +1124,7 @@ iframe {
   .Advertisement {
     height: 100px;
   }
-  .Advertisement > h1 {
+  .Advertisement > h3 {
     top: 20px;
     font-size: 15px;
   }
@@ -1231,7 +1231,7 @@ iframe {
   .Advertisement {
     height: 80px;
   }
-  .Advertisement > h1 {
+  .Advertisement > h3 {
     font-size: 10px;
     left: 8px;
   }
