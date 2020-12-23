@@ -292,12 +292,14 @@
   font-size: 30px;
   font-weight: 600;
 }
-.Heading > h5 {
+.Heading > h3::before {
+  content: "";
   text-align: center;
   height: 2px;
   background-color: rgb(214, 42, 71);
   width: 90px;
   position: absolute;
+  top: 40px;
   left: 45%;
 }
 .block {
@@ -833,18 +835,24 @@
   justify-content: center;
   align-items: flex-start;
   margin: 20px 0;
+  position: relative;
 }
-.Footer > .Contact > h5 {
-  height: 1px;
-  width: 10%;
-  background: rgb(214, 42, 71);
-}
+
 .Footer > .Contact > h2 {
   font-family: Padauk;
   text-transform: uppercase;
   font-size: 25px;
   color: #e6e6e6;
   letter-spacing: 1px;
+}
+.Footer > .Contact > h2::after {
+  content: "";
+  height: 1px;
+  width: 10%;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: rgb(214, 42, 71);
 }
 .Footer > .Contact > h3 {
   font-family: Padauk;
@@ -892,10 +900,15 @@
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  position: relative;
 }
-.Footer > .Service > h5 {
+.Footer > .Service > h2::before {
+  content: "";
   height: 1px;
   width: 10%;
+  position: absolute;
+  top: 30px;
+  left: 0;
   background: rgb(214, 42, 71);
 }
 .Footer > .Service > h2 {
@@ -920,6 +933,7 @@
 .Footer > .Location {
   margin-top: 20px;
   overflow: hidden;
+  position: relative;
 }
 .Footer > .Location > h2 {
   font-family: Padauk;
@@ -928,9 +942,13 @@
   color: #e6e6e6;
   letter-spacing: 1px;
 }
-.Footer > .Location > h5 {
+.Footer > .Location > h2::after {
+  content: "";
   height: 1px;
   width: 10%;
+  position: absolute;
+  top: 30px;
+  left: 0;
   background: rgb(214, 42, 71);
 }
 .mapouter {
@@ -1109,7 +1127,8 @@ iframe {
   .header > nav {
     display: none;
   }
-  .Heading > h1 {
+  .Heading > h3::before {
+    top: 40px;
     left: 40%;
   }
   .header > .cart {
@@ -1177,10 +1196,10 @@ iframe {
   .subscribe > form {
     margin-bottom: 20px;
   }
-  .content-details h3 {
+  .content-details > h3 {
     font-size: 18px;
   }
-  .content-details p {
+  .content-details > p {
     font-size: 10px;
   }
   .content-details > a {
@@ -1217,9 +1236,10 @@ iframe {
   .Heading {
     margin: 10px 0;
   }
-  .Heading > h1 {
-    width: 40px;
-    left: 45%;
+  .Heading > h3::before {
+    width: 60px;
+    top: 30px;
+    left: 40%;
   }
   .Heading > h3 {
     font-size: 20px;

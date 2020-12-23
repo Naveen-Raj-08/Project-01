@@ -466,13 +466,15 @@ ul.tabs li.active {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.Heading > h5 {
+.Heading > h3::after {
+  content: "";
   text-align: center;
   height: 2px;
   background-color: rgb(214, 42, 71);
   width: 30px;
+  top: 30px;
   position: absolute;
-  left: 0%;
+  left: 0;
 }
 #related-items {
   text-align: center;
@@ -626,6 +628,7 @@ ul.tabs li.active {
   justify-content: center;
   align-items: flex-start;
   margin: 20px 0;
+  position: relative;
 }
 .Footer > .Contact > h5 {
   height: 1px;
@@ -638,6 +641,15 @@ ul.tabs li.active {
   font-size: 25px;
   color: #e6e6e6;
   letter-spacing: 1px;
+}
+.Footer > .Contact > h2::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 10%;
+  top: 30px;
+  left: 0;
+  background: rgb(214, 42, 71);
 }
 .Footer > .Contact > h3 {
   font-family: Padauk;
