@@ -438,6 +438,7 @@ td {
   position: absolute;
   height: 1px;
   left: 0;
+  top: 30px;
   width: 10%;
   background: rgb(214, 42, 71);
 }
@@ -503,6 +504,7 @@ td {
   height: 1px;
   width: 10%;
   left: 0;
+  top: 30px;
   background: rgb(214, 42, 71);
 }
 .Footer > .Service > a {
@@ -534,6 +536,7 @@ td {
   position: absolute;
   height: 1px;
   left: 0;
+  top: 30px;
   width: 10%;
   background: rgb(214, 42, 71);
 }
