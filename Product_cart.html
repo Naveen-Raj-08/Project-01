@@ -140,10 +140,13 @@
                 <td class="total">$<span id="totalPrice"></span></td>
               </tr>
             </table>
-            <button class="button">Go to Checkout</button>
-            <div class="coupon">
-              <input type="text" placeholder="Apply coupons" />
-            </div>
+            <button class="button">
+              <i class="far fa-check-circle"></i> Go to Checkout
+            </button>
+            <form class="coupon" onsubmit="coupon()">
+              <input type="text" placeholder="Enter coupon code" />
+              <button class="coupon-btn">Apply</button>
+            </form>
           </div>
         </section>
       </main>
@@ -208,6 +211,9 @@
         </div>
       </footer>
     </div>
+    <script src="./JavaScript/Jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
     <script src="./JavaScript/Product_cart.js"></script>
   </body>
 </html>
