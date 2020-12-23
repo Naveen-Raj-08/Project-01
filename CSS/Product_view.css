@@ -731,6 +731,9 @@ ul.tabs li.active {
   max-width: 100%;
   width: 100%;
 }
+iframe {
+  border: none;
+}
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
