@@ -130,15 +130,17 @@
   right: 25px;
 }
 .header > .cart > a {
-  float: right;
+  /* float: right; */
   margin-top: 13px;
   font-size: 20px;
   color: whitesmoke;
+  position: absolute;
+  right: 0;
 }
 .header > .cart > a > i > span {
   font-size: 13px;
   position: absolute;
-  top: 10px;
+  top: 0px;
   border-radius: 50%;
 }
 
@@ -153,7 +155,7 @@
 .header > .cart > .menu-container > .toggler {
   position: absolute;
   top: 0;
-  right: 30px;
+  right: 0px;
   width: 30px;
   height: 25px;
   border-radius: 50%;
@@ -171,6 +173,7 @@
   justify-content: center;
   align-items: center;
   z-index: 2;
+  float: right;
 }
 
 .header > .cart > .menu-container > .Humburger > div {
@@ -188,6 +191,7 @@
   top: 0px;
   width: 100%;
   height: 2px;
+  right: 0;
   border-radius: 1.5px;
   background-color: white;
   transition: 0.4s;
@@ -777,16 +781,23 @@ iframe {
     left: 40%;
   }
   .header > .cart {
-    right: 50px;
+    right: 40px;
     top: 2px;
+  }
+  .header > .cart > a {
+    right: 40px;
   }
   .header > .cart > .menu-container {
     display: block;
-    position: relative;
-    margin: 0 -25px;
+    margin: 0 -10px;
+    right: 0px;
   }
   .header > .cart > .menu-container > .menu > div {
     top: 45%;
+    right: 0;
+  }
+  .header > .cart > .menu-container > .toggler {
+    right: -20px;
   }
   section {
     grid-template-columns: 100%;
@@ -842,21 +853,26 @@ iframe {
   }
   .header {
     display: grid;
-    grid-template-columns: 50% 45%;
+    grid-template-columns: 50% 50%;
   }
   .header > .cart {
     top: 3px;
+    right: 40px;
+  }
+  .header > .cart > a {
     right: 30px;
   }
+  .header > .cart > .menu-container {
+    display: block;
+    margin: 0;
+    left: 0px;
+  }
   .header > .cart > .menu-container > .toggler {
-    right: 0px;
+    right: -20px;
   }
   .header > .cart > .menu-container > .menu > div {
     top: 20%;
-  }
-  .header > .cart > .menu-container {
-    right: 50px;
-    margin: 0 -10px;
+    right: 0;
   }
   .cart-content > .cart {
     background-color: transparent;
