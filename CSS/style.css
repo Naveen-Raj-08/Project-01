@@ -171,6 +171,7 @@
   justify-content: center;
   align-items: center;
   z-index: 2;
+  float: right;
 }
 
 .header > .cart > .menu-container > .Humburger > div {
@@ -188,6 +189,7 @@
   top: 0px;
   width: 100%;
   height: 2px;
+  right: 0;
   border-radius: 1.5px;
   background-color: white;
   transition: 0.4s;
@@ -230,7 +232,7 @@
   width: 1600px;
   height: 1600px;
   border-radius: 50%;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translateX(-150%) translateY(-50%);
   background-color: #303030;
@@ -1098,6 +1100,15 @@ iframe {
   .Footer > .Service > a {
     font-size: 13px;
   }
+  .Footer > .Contact > h2::after {
+    top: 24px;
+  }
+  .Footer > .Service > h2::after {
+    top: 24px;
+  }
+  .Footer > .Location > h2::after {
+    top: 24px;
+  }
   .Footer > .Location > h2 {
     font-size: 20px;
   }
@@ -1139,6 +1150,9 @@ iframe {
     display: block;
     position: relative;
     margin: 0 -25px;
+  }
+  .header > .cart > .menu-container > .menu > div {
+    top: 45%;
   }
   .Advertisement {
     height: 100px;
@@ -1223,8 +1237,8 @@ iframe {
     top: 3px;
     right: 30px;
   }
-  .header > .cart > .menu-container > .toggler {
-    right: 0px;
+  .header > .cart > .menu-container > .menu > div {
+    top: 20%;
   }
   #carousel {
     margin: 50px 0;

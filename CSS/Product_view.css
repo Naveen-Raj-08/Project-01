@@ -229,7 +229,7 @@
   width: 1600px;
   height: 1600px;
   border-radius: 50%;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translateX(-150%) translateY(-50%);
   background-color: #303030;
@@ -292,7 +292,7 @@
   content: "";
   position: absolute;
   height: 2.5px;
-  top: -5px;
+  top: -10px;
   left: 0;
   background-color: rgb(214, 42, 71);
   opacity: 0.3;
@@ -351,12 +351,15 @@
   color: whitesmoke;
 }
 .product > .product-spec > .social {
-  margin: 30px 0;
+  margin: 50px 0;
 }
 .product > .product-spec > .social > a {
-  padding: 3px 8px;
+  margin: 0 5px;
   color: #202020;
   border-radius: 50%;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
@@ -856,6 +859,15 @@ iframe {
   .Footer > .Service > a {
     font-size: 13px;
   }
+  .Footer > .Contact > h2::after {
+    top: 24px;
+  }
+  .Footer > .Service > h2::after {
+    top: 24px;
+  }
+  .Footer > .Location > h2::after {
+    top: 24px;
+  }
   .Footer > .Location > h2 {
     font-size: 20px;
   }
@@ -894,6 +906,9 @@ iframe {
     display: block;
     position: relative;
     margin: 0 -25px;
+  }
+  .header > .cart > .menu-container > .menu > div {
+    top: 45%;
   }
   .product {
     margin-top: 10px;
@@ -947,6 +962,9 @@ iframe {
   }
   .header > .cart > .menu-container > .toggler {
     right: 0px;
+  }
+  .header > .cart > .menu-container > .menu > div {
+    top: 20%;
   }
   .product-list > .product-items {
     min-height: 300px;

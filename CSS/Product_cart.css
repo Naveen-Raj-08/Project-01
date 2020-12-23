@@ -230,7 +230,7 @@
   width: 1600px;
   height: 1600px;
   border-radius: 50%;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translateX(-150%) translateY(-50%);
   background-color: #303030;
@@ -280,6 +280,9 @@ section {
   grid-template-columns: 25% 25% 25% 25%;
   grid-gap: 5px;
   align-items: center;
+  text-align: center;
+  height: fit-content;
+  margin-right: 10px;
 }
 .cart-content > .cart > .Image > img {
   max-width: 100%;
@@ -288,13 +291,13 @@ section {
 }
 .cart-content > .cart > h2 {
   font-size: 20px;
+  margin: 0;
 }
 .cart-content > .cart > .Quantity > button {
-  padding: 8px 10px;
+  margin: 0 10px;
   background: transparent;
-  /* border: 1px solid #757575; */
-  border-radius: 50%;
   border: none;
+  text-align: center;
 }
 .cart-content > .cart > .Quantity > button:hover > i {
   color: #202020;
@@ -307,20 +310,20 @@ section {
   color: rgb(156, 156, 156);
 }
 .cart-content > .cart > .Quantity > span {
-  padding: 10px 12px;
-  /* border: 1px solid #757575; */
-  border-radius: 50%;
+  padding: 10px 5px;
 }
 .cart-content > .cart > p {
   font-size: 20px;
   font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 .Payment-option {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
+  max-width: 100%;
 }
 .Payment-option > h2 {
   font-size: 23px;
@@ -329,6 +332,7 @@ section {
 table {
   margin: 30px 0px 0px 0px;
   border-collapse: collapse;
+  max-width: 100%;
   width: 100%;
 }
 .data {
@@ -361,17 +365,34 @@ td {
 }
 .coupon {
   margin-top: 50px;
-  width: 100%;
+  max-width: 100%;
   text-align: left;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .coupon > input {
-  padding: 8px 13px;
-  letter-spacing: 0.5px;
+  width: 100%;
+  padding: 8px 8px;
+  letter-spacing: 0.2px;
+  border: 1px solid #505050;
+  border-radius: 0px;
 }
 .coupon > input:focus {
   outline-color: rgb(214, 42, 71);
 }
-
+.coupon > .coupon-btn {
+  padding: 8px 15px;
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid rgb(214, 42, 71);
+  background-color: rgb(214, 42, 71);
+  color: white;
+}
+.coupon > .coupon-btn:focus {
+  outline: none;
+}
 .footer {
   background-color: #202020;
   width: 100%;
@@ -398,6 +419,7 @@ td {
   justify-content: center;
   align-items: flex-start;
   margin: 20px 0;
+  position: relative;
 }
 .Footer > .Contact > h5 {
   height: 1px;
@@ -410,6 +432,14 @@ td {
   font-size: 25px;
   color: #e6e6e6;
   letter-spacing: 1px;
+}
+.Footer > .Contact > h2::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 0;
+  width: 10%;
+  background: rgb(214, 42, 71);
 }
 .Footer > .Contact > h3 {
   font-family: Padauk;
@@ -457,18 +487,23 @@ td {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  position: relative;
 }
-.Footer > .Service > h5 {
-  height: 1px;
-  width: 10%;
-  background: rgb(214, 42, 71);
-}
+
 .Footer > .Service > h2 {
   font-family: Padauk;
   text-transform: uppercase;
   font-size: 25px;
   color: #e6e6e6;
   letter-spacing: 1px;
+}
+.Footer > .Service > h2::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 10%;
+  left: 0;
+  background: rgb(214, 42, 71);
 }
 .Footer > .Service > a {
   padding: 5px 0px;
@@ -485,6 +520,7 @@ td {
 .Footer > .Location {
   margin-top: 20px;
   overflow: hidden;
+  position: relative;
 }
 .Footer > .Location > h2 {
   font-family: Padauk;
@@ -493,11 +529,15 @@ td {
   color: #e6e6e6;
   letter-spacing: 1px;
 }
-.Footer > .Location > h5 {
+.Footer > .Location > h2::after {
+  content: "";
+  position: absolute;
   height: 1px;
+  left: 0;
   width: 10%;
   background: rgb(214, 42, 71);
 }
+
 .mapouter {
   margin-top: 20px 0;
   max-width: 100%;
@@ -557,6 +597,15 @@ iframe {
   .Footer {
     grid-gap: 5px;
   }
+  .Footer > .Contact > h2::after {
+    top: 24px;
+  }
+  .Footer > .Service > h2::after {
+    top: 24px;
+  }
+  .Footer > .Location > h2::after {
+    top: 24px;
+  }
 }
 @media screen and (max-width: 999px) {
   .header > nav > ul > li {
@@ -573,6 +622,34 @@ iframe {
     max-width: 100%;
     width: 100%;
     height: auto;
+  }
+  section {
+    grid-template-columns: 70% 30%;
+  }
+  .cart-content > .cart {
+    grid-template-columns: 25% 30% 25% 20%;
+  }
+  .cart-content > .cart > h2 {
+    font-size: 15px;
+  }
+  .cart-content > .cart > p {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+  .cart-content > .cart > .Quantity > button {
+    margin: 0 8px;
+    text-align: right;
+  }
+  .Payment-option > h2 {
+    font-size: 18px;
+  }
+  td {
+    padding: 0;
+    font-size: 15px;
+  }
+  .button {
+    font-size: 15px;
   }
   .Footer > .Contact > h2 {
     font-size: 20px;
@@ -628,6 +705,31 @@ iframe {
     position: relative;
     margin: 0 -25px;
   }
+  .header > .cart > .menu-container > .menu > div {
+    top: 45%;
+  }
+  section {
+    grid-template-columns: 100%;
+  }
+  .cart-content > .cart {
+    margin: 0;
+  }
+  .Payment-option {
+    margin-top: 60px;
+  }
+  .Payment-option > h2 {
+    font-size: 20px;
+  }
+  td {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .button {
+    padding: 13px;
+  }
+  .coupon {
+    width: 55%;
+  }
   .Footer {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -657,11 +759,35 @@ iframe {
   .header > .cart > .menu-container > .toggler {
     right: 0px;
   }
+  .header > .cart > .menu-container > .menu > div {
+    top: 20%;
+  }
   .header > .cart > .menu-container {
     right: 50px;
     margin: 0 -10px;
   }
-
+  .cart-content > .cart {
+    background-color: transparent;
+    grid-template-columns: repeat(2, 50%);
+    padding: 0;
+    margin: 0;
+  }
+  .cart-content > .cart > .Quantity > span {
+    padding: 0;
+  }
+  .Payment-option > h2 {
+    font-size: 18px;
+  }
+  td {
+    font-size: 15px;
+    padding: 7px;
+  }
+  .button {
+    padding: 13px;
+  }
+  .coupon {
+    width: 75%;
+  }
   .subscribe > form > input {
     font-size: 12px;
   }
