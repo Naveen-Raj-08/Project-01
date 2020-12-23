@@ -104,40 +104,54 @@
           <div class="cart-content">
             <div class="cart">
               <div class="Image">
+                <h5>Product Image</h5>
                 <img src="./Media/SP3.jpg" alt="selling product" />
               </div>
-              <h2>Platinum Earring</h2>
-              <div class="Quantity">
-                <button id="leftbtn" onclick="Decrease()">
-                  <i class="fas fa-minus"></i>
-                </button>
-                <span id="result"></span>
-                <button id="rightbtn" onclick="Increase()">
-                  <i class="fas fa-plus"></i>
-                </button>
+              <div class="product-title">
+                <h5>Product Title</h5>
+                <h2>Platinum Earring</h2>
               </div>
-              <p class="price">$<span id="price"></span></p>
+              <div class="product-quantity">
+                <h5>Product Quantity</h5>
+                <div class="Quantity">
+                  <button id="leftbtn" onclick="Decrease()">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <span id="result"></span>
+                  <button id="rightbtn" onclick="Increase()">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product-price">
+                <h5>Product Price</h5>
+                <p class="price">$<span id="price"></span></p>
+              </div>
             </div>
           </div>
           <div class="Payment-option">
             <h2>The total amount of product</h2>
             <table>
               <tr>
-                <td>Temporary amount</td>
-                <td>
+                <td id="title">Temporary amount</td>
+                <td id="amount">
                   $<span id="productPrice"></span> x
                   <span id="quantity"></span>
                 </td>
               </tr>
               <tr class="data">
-                <td>Shipping</td>
-                <td>$<span id="shipping"></span></td>
+                <td id="title">Shipping</td>
+                <td id="amount">$<span id="shipping"></span></td>
               </tr>
             </table>
             <table>
               <tr>
-                <td class="total">The total amount of<br />(including GST)</td>
-                <td class="total">$<span id="totalPrice"></span></td>
+                <td id="title" class="total">
+                  The total amount of<br />(including GST)
+                </td>
+                <td id="amount" class="total">
+                  $<span id="totalPrice"></span>
+                </td>
               </tr>
             </table>
             <button class="button">
