@@ -404,20 +404,23 @@ table {
   font-weight: 600;
 }
 .button {
-  padding: 5px 10px;
+  padding: 8px 10px;
   margin-top: 20px;
   width: 100%;
   background: transparent;
   border: 1px solid black;
   text-transform: uppercase;
   letter-spacing: 0.6px;
+  text-align: center;
   transition: all 0.5s ease-in-out;
+  color: #202020;
 }
 .button:focus {
   outline: none;
 }
 .button:hover {
   color: white;
+  text-decoration: none;
   background-color: rgb(214, 42, 71);
   border: 1px solid rgb(214, 42, 71);
 }
