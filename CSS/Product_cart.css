@@ -282,10 +282,23 @@ section {
 .cart-content > .cart {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "Image Title Quantity Price";
   grid-gap: 5px;
   text-align: center;
   height: fit-content;
   margin-right: 10px;
+}
+.cart-content > .cart > .Image {
+  grid-area: Image;
+}
+.cart-content > .cart > .product-title {
+  grid-area: Title;
+}
+.cart-content > .cart > .product-quantity {
+  grid-area: Quantity;
+}
+.cart-content > .cart > .product-price {
+  grid-area: Price;
 }
 .cart-content > .cart > .Image > img {
   max-width: 100%;
@@ -426,7 +439,7 @@ td {
   margin: 0 auto;
   max-width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-align: center;
@@ -438,6 +451,7 @@ td {
   letter-spacing: 0.2px;
   border: 1px solid #505050;
   border-radius: 0px;
+  margin-right: 10px;
 }
 .Payment-option > .coupon > input:focus {
   outline-color: rgb(214, 42, 71);
@@ -445,7 +459,6 @@ td {
 .Payment-option > .coupon > .coupon-btn {
   padding: 8px 15px;
   max-width: 100%;
-
   margin: 10px 0;
   border: 1px solid rgb(214, 42, 71);
   background-color: rgb(214, 42, 71);
@@ -692,6 +705,7 @@ iframe {
   }
   .cart-content > .cart {
     grid-template-columns: 25% 30% 25% 20%;
+    grid-template-areas: "Image Title Quantity Price";
   }
   .cart-content > .cart > .Image > h5 {
     font-size: 12px;
@@ -804,6 +818,27 @@ iframe {
   }
   .cart-content > .cart {
     margin: 0;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "Image Title"
+      "Image Quantity"
+      "Image Price";
+    align-items: center;
+  }
+  .cart-content > .cart > .Image > img {
+    width: 50%;
+  }
+  .cart-content > .cart > .Image > h5 {
+    display: none;
+  }
+  .cart-content > .cart > .product-title > h5 {
+    display: none;
+  }
+  .cart-content > .cart > .product-quantity > h5 {
+    display: none;
+  }
+  .cart-content > .cart > .product-price > h5 {
+    display: none;
   }
   .Payment-option {
     margin-top: 60px;
@@ -819,19 +854,16 @@ iframe {
     padding: 13px;
   }
   .coupon {
-    width: 55%;
+    width: 50%;
   }
   .cart-content > .cart > .product-title > h5 {
     font-size: 12px;
-    margin-bottom: 80px;
   }
   .cart-content > .cart > .product-quantity > h5 {
     font-size: 12px;
-    margin-bottom: 80px;
   }
   .cart-content > .cart > .product-price > h5 {
     font-size: 12px;
-    margin-bottom: 75px;
   }
   .Footer {
     display: grid;
@@ -875,10 +907,16 @@ iframe {
     right: 0;
   }
   .cart-content > .cart {
-    background-color: transparent;
-    grid-template-columns: repeat(2, 50%);
-    padding: 0;
     margin: 0;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "Image Title"
+      "Image Quantity"
+      "Image Price";
+    align-items: center;
+  }
+  .cart-content > .cart > .Image > img {
+    width: 80%;
   }
   .cart-content > .cart > .product-title {
     margin: auto 0;
@@ -892,18 +930,7 @@ iframe {
   .cart-content > .cart > .Quantity > span {
     padding: 0;
   }
-  .cart-content > .cart > .Image > h5 {
-    display: none;
-  }
-  .cart-content > .cart > .product-title > h5 {
-    display: none;
-  }
-  .cart-content > .cart > .product-quantity > h5 {
-    display: none;
-  }
-  .cart-content > .cart > .product-price > h5 {
-    display: none;
-  }
+
   .Payment-option > h2 {
     font-size: 18px;
   }
@@ -915,7 +942,7 @@ iframe {
     padding: 13px;
   }
   .coupon {
-    width: 75%;
+    width: 100%;
   }
   .subscribe > form > input {
     font-size: 12px;
