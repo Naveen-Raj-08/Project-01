@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JoJo Checkout</title>
+    <link
+      rel="stylesheet"
+      href="./OwlCarousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./OwlCarousel/dist/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+      integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g=="
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./CSS/Checkout.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container-fluid title">
+        <h4><i class="fas fa-phone-alt"></i> +190 839 9834</h4>
+        <h4>Free returns. Standard shipping order $99+</h4>
+        <div class="Social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <header class="sticky-top header">
+        <div class="logo">
+          <a href="./index.html"><img src="./Media/Logo.png" alt="logo" /></a>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Favorites</a>
+              <ul>
+                <li>
+                  <a href="/Product_list.html">page1</a>
+                </li>
+                <li>
+                  <a href="/Product_view.html">page2</a>
+                </li>
+                <li>
+                  <a href="./Product_cart.html">page3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="cart">
+          <a href="./Product_cart.html"
+            ><i class="fas fa-shopping-cart">
+              <span id="cartCount" class="badge badge-danger">29</span></i
+            >
+          </a>
+          <div class="menu-container">
+            <input type="checkbox" class="toggler" />
+            <div class="Humburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="menu">
+              <div>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="/index.html">Home</a>
+                    </li>
+                    <li>
+                      <a href="/Product_list.html">page1</a>
+                    </li>
+                    <li>
+                      <a href="/Product_view.html">page2</a>
+                    </li>
+                    <li>
+                      <a href="./Product_cart.html">page3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="container">
+          <div class="checkout">
+            <div class="bill-section">
+              <h1>Billing details</h1>
+              <form class="delivery" id="Bill" onsubmit="productBill()">
+                <div class="Name">
+                  <label>First & Last Name</label>
+                  <input type="text" placeholder="Name" />
+                </div>
+                <div class="Email">
+                  <label>Email address</label>
+                  <input type="email" placeholder="Email" />
+                </div>
+                <div class="Address">
+                  <label>Current Address</label>
+                  <textarea id="" cols="30" rows="5"></textarea>
+                </div>
+                <div class="landmark">
+                  <label>Landmark</label>
+                  <input type="text" placeholder="Landmark" />
+                </div>
+                <div class="state">
+                  <label>State</label>
+                  <select id="states" form="Bill">
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Andhra Pradhesh">Andhra Pradhesh</option>
+                  </select>
+                </div>
+                <div class="country">
+                  <label>Country</label>
+                  <select id="countries" form="Bill">
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Russia">Russia</option>
+                    <option value="China">China</option>
+                    <option value="Australia">Australia</option>
+                  </select>
+                </div>
+                <div class="postal-code">
+                  <label>Postal / ZIP code</label>
+                  <input type="text" placeholder="Postal code" />
+                </div>
+                <div class="Payment-Options">
+                  <div class="payment1">
+                    <h5 id="button">Credit Card</h5>
+                    <div id="card">
+                      <div class="credit-card">
+                        <div class="card-number">
+                          <label>Card Number</label>
+                          <input type="text" placeholder="16 Digit" />
+                        </div>
+                        <div class="card-expire">
+                          <label>Expiration date</label>
+                          <div class="Dates">
+                            <select id="months" form="Bill">
+                              <option value="month">Month</option>
+                              <option value="month">25</option>
+                              <option value="month">26</option>
+                            </select>
+                            <select id="years" form="Bill">
+                              <option value="year">Year</option>
+                              <option value="year">2025</option>
+                              <option value="year">2027</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="Security">
+                          <label>Security code</label>
+                          <input type="text" placeholder="CVV" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="payment2">
+                    <h5>Cash on Delivery</h5>
+                  </div>
+                  <div class="payment3">
+                    <h5>Net Banking</h5>
+                  </div>
+                </div>
+                <p>
+                  <input type="checkbox" form="Bill" /> By clicking the button,
+                  you agree to
+                  <a href="#">terms & conditions</a>
+                </p>
+                <a href="#" type="submit">Place a Order</a>
+              </form>
+            </div>
+
+            <div class="cart-summary">
+              <div class="Cart-details">
+                <table>
+                  <tr>
+                    <td>1 x Platinum Earring</td>
+                    <td>$69</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div id="tsparticles"></div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#fff"
+              fill-opacity="1"
+              d="M0,256L48,218.7C96,181,192,107,288,101.3C384,96,480,160,576,208C672,256,768,288,864,256C960,224,1056,128,1152,112C1248,96,1344,160,1392,192L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            ></path>
+          </svg>
+        </div>
+
+        <div class="container">
+          <div class="Footer">
+            <div class="Contact">
+              <h2>Contact Info</h2>
+              <h3>Phone:</h3>
+              <span>+190 839 9834</span>
+              <h3>Email:</h3>
+              <span><a href="mailto@exmaple.com">e-jewel@gmail.com</a></span>
+              <div class="Social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="Service">
+              <h2>Customer Service</h2>
+              <a href="#">About</a>
+              <a href="#">Order</a>
+              <a href="#">Favorites</a>
+              <a href="#">New Collections</a>
+            </div>
+            <div class="Location">
+              <h2>Location</h2>
+              <div class="mapouter">
+                <div class="gmap_canvas">
+                  <iframe
+                    id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=Newyork&t=k&z=11&ie=UTF8&iwloc=&output=embed"
+                  ></iframe>
+                  <a href="https://embedgooglemap.net/142/"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="subscribe">
+            <div class="copyright">
+              <p>&copy; Copyright 2020.All Rights Reserved</p>
+            </div>
+            <form>
+              <input type="email" placeholder="Your Email" />
+              <button>Subscribe <i class="fas fa-envelope"></i></button>
+            </form>
+            <div class="payment">
+              <img src="./Media/Payment.png" alt="payment" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./JavaScript/Jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
+    <script src="./JavaScript/Checkout.js"></script>
+  </body>
+</html>
