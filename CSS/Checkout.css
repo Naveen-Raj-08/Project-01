@@ -306,13 +306,14 @@
 .payment1,
 .payment2,
 .payment3,
-button {
+h5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
   width: 100%;
 }
+
 .checkout > .bill-section > h1 {
   font-size: 20px;
   color: #202020;
@@ -334,16 +335,16 @@ button {
   font-weight: 400;
   letter-spacing: 0.2px;
 }
-.checkout > .bill-section > .delivery > .Name > input[type="text"] {
+.checkout > .bill-section > .delivery > .Name > .Text {
   padding: 10px 15px;
 }
-.checkout > .bill-section > .delivery > .Email > input[type="email"] {
+.checkout > .bill-section > .delivery > .Email > .Text {
   padding: 10px 15px;
 }
-.checkout > .bill-section > .delivery > .landmark > input[type="text"] {
+.checkout > .bill-section > .delivery > .landmark > .Text {
   padding: 10px 15px;
 }
-.checkout > .bill-section > .delivery > .postal-code > input[type="text"] {
+.checkout > .bill-section > .delivery > .postal-code > .Text {
   padding: 10px 15px;
 }
 .checkout > .bill-section > .delivery > .state > select {
@@ -397,8 +398,8 @@ button {
 .checkout > .bill-section > .delivery > a:hover {
   text-decoration: none;
 }
-.checkout > .bill-section > .delivery > p {
-  font-size: 12.5px;
+.checkout > .bill-section > .delivery > .terms-condition {
+  font-size: 16px;
   text-align: left;
 }
 .checkout > .bill-section > .delivery > .Payment-Options > .payment1 > #card {
@@ -480,7 +481,7 @@ button {
   > #card
   > .credit-card
   > .card-number
-  > input {
+  > .Text {
   padding: 8px 15px;
 }
 
@@ -505,7 +506,7 @@ button {
   > #card
   > .credit-card
   > .Security
-  > input {
+  > .Text {
   padding: 7px 15px;
 }
 .checkout > .cart-summary {
@@ -514,15 +515,51 @@ button {
   max-width: 100%;
   width: 100%;
   justify-self: end;
-  border: 1px solid black;
+  font-family: Poppins;
+}
+.checkout > .cart-summary > .Cart-details {
+  background-color: #f5f5f5;
+  padding: 30px;
+  margin-top: 100px;
+}
+table {
+  width: 100%;
+}
+.cart-heading {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.cart-heading > .edit {
+  font-size: 15px;
+  color: rgb(214, 42, 71);
+}
+td {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 20px 0px;
+}
+.Description {
+  font-size: 13px;
+  color: #909090;
+  font-weight: 100;
+}
+.table-row {
+  border-bottom: 1px solid rgb(190, 190, 190);
+}
+.price {
+  text-align: right;
 }
 
+/* Footer */
 .footer {
   background-color: #202020;
   width: 100%;
   position: relative;
   z-index: 999;
 }
+
 .Footer {
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -545,11 +582,7 @@ button {
   margin: 20px 0;
   position: relative;
 }
-.Footer > .Contact > h5 {
-  height: 1px;
-  width: 10%;
-  background: rgb(214, 42, 71);
-}
+
 .Footer > .Contact > h2 {
   font-family: Padauk;
   text-transform: uppercase;
@@ -559,11 +592,11 @@ button {
 }
 .Footer > .Contact > h2::after {
   content: "";
-  position: absolute;
   height: 1px;
-  left: 0;
-  top: 30px;
   width: 10%;
+  position: absolute;
+  top: 30px;
+  left: 0;
   background: rgb(214, 42, 71);
 }
 .Footer > .Contact > h3 {
@@ -614,22 +647,21 @@ button {
   margin: 20px 0;
   position: relative;
 }
-
+.Footer > .Service > h2::before {
+  content: "";
+  height: 1px;
+  width: 10%;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: rgb(214, 42, 71);
+}
 .Footer > .Service > h2 {
   font-family: Padauk;
   text-transform: uppercase;
   font-size: 25px;
   color: #e6e6e6;
   letter-spacing: 1px;
-}
-.Footer > .Service > h2::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 10%;
-  left: 0;
-  top: 30px;
-  background: rgb(214, 42, 71);
 }
 .Footer > .Service > a {
   padding: 5px 0px;
@@ -657,14 +689,13 @@ button {
 }
 .Footer > .Location > h2::after {
   content: "";
-  position: absolute;
   height: 1px;
-  left: 0;
-  top: 30px;
   width: 10%;
+  position: absolute;
+  top: 30px;
+  left: 0;
   background: rgb(214, 42, 71);
 }
-
 .mapouter {
   margin-top: 20px 0;
   max-width: 100%;
@@ -686,28 +717,29 @@ iframe {
   align-items: center;
   padding: 20px 0px;
 }
-.subscribe > form > input {
+.subscribe > .subscribe-form > input {
   padding: 10px 15px;
   border: none;
 }
-.subscribe > form > input:focus {
+.subscribe > .subscribe-form > input:focus {
   border: none;
   outline: none;
 }
-.subscribe > form > button {
+.subscribe > .subscribe-form > button {
   padding: 10px 15px;
   border: none;
   color: white;
   background-color: rgb(214, 42, 71);
-  text-transform: uppercase;
+  text-decoration: uppercase;
   letter-spacing: 1px;
   font-size: 16px;
   font-weight: 600;
 }
-.subscribe > form > button:focus {
+.subscribe > .subscribe-form > button:focus {
   outline: none;
   border: none;
 }
+
 .subscribe > .copyright > p {
   color: #a8a8a8;
   font-size: small;
@@ -718,4 +750,233 @@ iframe {
   max-width: 100%;
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 1199px) {
+  .Footer {
+    grid-gap: 5px;
+  }
+  .cart-heading {
+    font-size: 18px;
+  }
+  .cart-heading > .edit {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .header > nav > ul > li {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .header > nav > ul > li > a {
+    padding: 10px 10px;
+  }
+  .header > .logo {
+    padding: 5px 0;
+  }
+  .header > .logo > a > img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  .cart-heading {
+    font-size: 14px;
+  }
+  .checkout
+    > .bill-section
+    > .delivery
+    > .Payment-Options
+    > .payment1
+    > #card
+    > .credit-card {
+    margin: 5px 0;
+  }
+  .checkout > .bill-section > .delivery > .Name,
+  .Email,
+  .Address,
+  .landmark,
+  .state,
+  .country,
+  .postal-code label {
+    font-size: 13px;
+  }
+  td {
+    font-size: 13px;
+  }
+  .checkout
+    > .bill-section
+    > .delivery
+    > .Payment-Options
+    > .payment1
+    > #card
+    > .credit-card
+    > .card-number,
+  .card-expire,
+  .Security > label {
+    font-size: 13px;
+  }
+  .checkout > .bill-section > .delivery > .terms-condition {
+    font-size: 13px;
+  }
+  .Footer > .Contact > h2 {
+    font-size: 20px;
+  }
+  .Footer > .Contact > h3 {
+    font-size: 14px;
+  }
+  .Footer > .Contact > span {
+    font-size: 13px;
+  }
+  .Footer > .Service > h2 {
+    font-size: 20px;
+  }
+  .Footer > .Service > a {
+    font-size: 13px;
+  }
+  .Footer > .Contact > h2::after {
+    top: 24px;
+  }
+  .Footer > .Service > h2::after {
+    top: 24px;
+  }
+  .Footer > .Location > h2::after {
+    top: 24px;
+  }
+  .Footer > .Location > h2 {
+    font-size: 20px;
+  }
+  .subscribe > .copyright > p {
+    font-size: 10px;
+  }
+  .subscribe > .subscribe-form > input {
+    padding: 8px 8px;
+    font-size: 10px;
+  }
+  .subscribe > .subscribe-form > button {
+    padding: 8px 8px;
+    font-size: 10px;
+  }
+  .subscribe > .subscribe-form {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+  .header > nav {
+    display: none;
+  }
+  .Heading > h3::before {
+    top: 40px;
+    left: 40%;
+  }
+  .header > .cart {
+    right: 40px;
+    top: 2px;
+  }
+  .header > .cart > a {
+    right: 40px;
+  }
+  .header > .cart > .menu-container {
+    display: block;
+    margin: 0 -10px;
+    right: 0px;
+  }
+  .header > .cart > .menu-container > .menu > div {
+    top: 45%;
+    right: 0;
+  }
+  .header > .cart > .menu-container > .toggler {
+    right: -20px;
+  }
+  .checkout {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "Cart_Summary"
+      "Billing";
+  }
+  .checkout > .bill-section > h1 {
+    margin-bottom: 5px;
+  }
+  .cart-heading {
+    margin-bottom: 5px;
+  }
+  .checkout > .cart-summary > .Cart-details {
+    margin-top: 0px;
+  }
+  .Footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .subscribe > .subscribe-form {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper > .title {
+    display: none;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .header > .cart {
+    top: 3px;
+    right: 40px;
+  }
+  .header > .cart > a {
+    right: 30px;
+  }
+  .header > .cart > .menu-container {
+    display: block;
+    margin: 0;
+    left: 8px;
+  }
+  .header > .cart > .menu-container {
+    right: 50px;
+    margin: 0 -10px;
+  }
+  .header > .cart > .menu-container > .toggler {
+    right: -20px;
+  }
+  .header > .cart > .menu-container > .menu > div {
+    top: 20%;
+    right: 0;
+  }
+  .checkout > .bill-section {
+    padding: 0;
+  }
+  .checkout > .bill-section > h1 {
+    margin-top: 30px;
+  }
+  .checkout > .cart-summary {
+    padding: 0;
+    margin-top: 10px;
+  }
+  .checkout > .cart-summary > .Cart-details {
+    padding: 10px;
+  }
+  .Footer {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .subscribe > form > input {
+    font-size: 12px;
+  }
+  .subscribe > form > button {
+    font-size: 11px;
+    padding: 10px 15px;
+  }
 }
