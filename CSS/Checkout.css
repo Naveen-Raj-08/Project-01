@@ -138,10 +138,15 @@
   right: 0;
 }
 .header > .cart > a > i > span {
-  font-size: 13px;
+  font-size: 10px;
+  min-width: 17px;
+  font-family: Arimo;
+  padding: 3px 3px;
   position: absolute;
+  background-color: #eb1c11;
   top: 0px;
   border-radius: 50%;
+  text-align: center;
 }
 
 /* Humburger Menu */
@@ -953,7 +958,7 @@ iframe {
     right: -20px;
   }
   .header > .cart > .menu-container > .menu > div {
-    top: 20%;
+    top: 25%;
     right: 0;
   }
   .checkout > .bill-section {
