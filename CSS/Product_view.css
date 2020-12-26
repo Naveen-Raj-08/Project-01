@@ -909,6 +909,9 @@ iframe {
   .Heading > h5 {
     left: 0;
   }
+  .header > .cart > a > i > span {
+    font-size: 10px;
+  }
   .header > .cart {
     right: 40px;
     top: 2px;

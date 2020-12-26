@@ -802,6 +802,9 @@ iframe {
   .Heading > h1 {
     left: 40%;
   }
+  .header > .cart > a > i > span {
+    font-size: 10px;
+  }
   .header > .cart {
     right: 40px;
     top: 2px;
