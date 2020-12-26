@@ -107,11 +107,11 @@
               <form class="delivery" id="Bill" onsubmit="productBill()">
                 <div class="Name">
                   <label>First & Last Name</label>
-                  <input type="text" placeholder="Name" />
+                  <input class="Text" type="text" placeholder="Name" />
                 </div>
                 <div class="Email">
                   <label>Email address</label>
-                  <input type="email" placeholder="Email" />
+                  <input class="Text" type="email" placeholder="Email" />
                 </div>
                 <div class="Address">
                   <label>Current Address</label>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="landmark">
                   <label>Landmark</label>
-                  <input type="text" placeholder="Landmark" />
+                  <input class="Text" type="text" placeholder="Landmark" />
                 </div>
                 <div class="state">
                   <label>State</label>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="postal-code">
                   <label>Postal / ZIP code</label>
-                  <input type="text" placeholder="Postal code" />
+                  <input class="Text" type="text" placeholder="Postal code" />
                 </div>
                 <div class="Payment-Options">
                   <div class="payment1">
@@ -154,7 +154,11 @@
                       <div class="credit-card">
                         <div class="card-number">
                           <label>Card Number</label>
-                          <input type="text" placeholder="16 Digit" />
+                          <input
+                            class="Text"
+                            type="text"
+                            placeholder="16 Digit"
+                          />
                         </div>
                         <div class="card-expire">
                           <label>Expiration date</label>
@@ -173,7 +177,7 @@
                         </div>
                         <div class="Security">
                           <label>Security code</label>
-                          <input type="text" placeholder="CVV" />
+                          <input class="Text" type="text" placeholder="CVV" />
                         </div>
                       </div>
                     </div>
@@ -185,7 +189,7 @@
                     <h5>Net Banking</h5>
                   </div>
                 </div>
-                <p>
+                <p class="terms-condition">
                   <input type="checkbox" form="Bill" /> By clicking the button,
                   you agree to
                   <a href="#">terms & conditions</a>
@@ -197,10 +201,37 @@
             <div class="cart-summary">
               <div class="Cart-details">
                 <table>
-                  <tr>
-                    <td>1 x Platinum Earring</td>
-                    <td>$69</td>
-                  </tr>
+                  <thead class="table-heading">
+                    <td class="heading-data">
+                      <h3 class="cart-heading">
+                        <i class="fas fa-shopping-cart"></i> Cart Summary (<a
+                          href="./Product_cart.html"
+                          class="edit"
+                          >Edit</a
+                        >)
+                      </h3>
+                    </td>
+                  </thead>
+                  <tbody>
+                    <tr class="table-row">
+                      <td>
+                        <span id="quanity">1</span> x Platinum Earring<br />
+                        <span class="Description"
+                          >Amazing Brand new Earring for your <br />
+                          Next Festival!
+                        </span>
+                      </td>
+                      <td class="price">$ <span id="price">69</span></td>
+                    </tr>
+                    <tr class="table-row">
+                      <td>Shipping Cost</td>
+                      <td class="price">$ <span id="shipping">3</span></td>
+                    </tr>
+                    <tr>
+                      <td>Total Amount</td>
+                      <td class="price">$ <span id="total">72.00</span></td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -257,10 +288,10 @@
             <div class="copyright">
               <p>&copy; Copyright 2020.All Rights Reserved</p>
             </div>
-            <form>
+            <div class="subscribe-form">
               <input type="email" placeholder="Your Email" />
               <button>Subscribe <i class="fas fa-envelope"></i></button>
-            </form>
+            </div>
             <div class="payment">
               <img src="./Media/Payment.png" alt="payment" />
             </div>
