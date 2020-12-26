@@ -435,7 +435,7 @@ td {
 #title {
   text-align: left;
 }
-#amount {
+.amount {
   text-align: right;
 }
 .Payment-option > .coupon {
