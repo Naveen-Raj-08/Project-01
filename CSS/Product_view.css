@@ -984,7 +984,7 @@ iframe {
   .header > .cart > .menu-container {
     display: block;
     margin: 0;
-    left: 0px;
+    left: 8px;
   }
   .header > .cart > .menu-container > .toggler {
     right: -20px;
