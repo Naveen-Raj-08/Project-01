@@ -139,7 +139,7 @@
   right: 0;
 }
 .header > .cart > a > i > span {
-  font-size: 10px;
+  font-size: 12px;
   min-width: 17px;
   font-family: Arimo;
   padding: 3px 3px;
@@ -906,8 +906,9 @@ iframe {
   .header > nav {
     display: none;
   }
-  .Heading > h5 {
-    left: 0;
+  .Heading > h3::before {
+    top: 40px;
+    left: 40%;
   }
   .header > .cart > a > i > span {
     font-size: 10px;
